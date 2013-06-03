@@ -10,8 +10,6 @@ require "stock_quote"
 #   @img_url = suckr.get_image_url({"q" => "#{@image}"})
 # end
 
-
-
 get "/" do
   erb :index
 end
@@ -29,14 +27,14 @@ get "/movies_results" do
       @movie_rating = @movie.rating
       @movie_director = @movie.director
       @movie_released = @movie.released
+      @movie_plot = @movie.plot
 
       suckr = ImageSuckr::GoogleSuckr.new
       @img_url = suckr.get_image_url({"q" => "#{@title}"})
       erb :movies_results
     rescue
       erb :movies
-    end
-    
+    end   
 end
 
 get "/stocks" do
@@ -45,7 +43,6 @@ end
 
 get "/stocks_results" do
   @symbol = params[:symbol]
-
   begin
     @stock = StockQuote::Stock.quote(@symbol)
     @stock_symbol = @stock.pretty_symbol
@@ -72,7 +69,6 @@ get "/images_results" do
   @image = params[:image]
   suckr = ImageSuckr::GoogleSuckr.new
   @img_url = suckr.get_image_url({"q" => "#{@image}"})
-
   erb :images_results
 end
 
@@ -81,9 +77,8 @@ get "/images_random" do
   "tulips", "daisies", "gardenias", "anemones flower", "hydrangeas", "lilacs", "sunflowers",
   "begonias", "cala lilly", "carnation", "dahlia", "lavender", "pansy", "oriental lily" ]
   @item = words.sample
+
   suckr = ImageSuckr::GoogleSuckr.new
   @img_url = suckr.get_image_url({"q" => "#{@item}"})
-
   erb :images_results
-
 end

@@ -1,12 +1,11 @@
 		<div class="photo">
 			<img src="<%= @img_url %>" >
 		</div>
-
+		
 		<div class="about">
 			<div>
-				<ul>Here is some basic info about your stock:
-					<li>Symbol: <%= @stock_symbol %> </li>
-					<li>Company: <%= @stock_symbol %> </li>
+				<ul><h3>Here is the summary for <%= @stock_symbol %>:</h3>
+					<li>Company: <%= @stock_company %> </li>
 					<li>Today's High: <%= @stock_high %> </li>
 					<li>Today's Low: <%= @stock_low %> </li>
 					<li>Open: <%= @stock_open %> </li>
@@ -18,5 +17,4 @@
 				<input type="text" name="symbol" value="<%= @symbol %>">
 				<button>Search</button>
 			</form>
-
 		</div>
