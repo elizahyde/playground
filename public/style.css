@@ -1,0 +1,139 @@
+html {
+	background-color: #DEDEDE;
+}
+h1 {
+	color: #green;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+h3 {
+	color: green;
+	margin-top: -25px;
+	font-family: 'Rambla', sans-serif;
+	margin-bottom: 20px;
+}
+
+body p {
+	color: #7F7F7F;
+	font-family: 'Rambla', sans-serif;
+	letter-spacing: .8px;
+	line-height: 24px;
+}
+
+body p .orange {
+	color: #f55b2c;
+}
+
+body p img {
+	width: 25px;
+	color: white;
+	margin: none;
+	padding: none;
+}
+
+a:link {
+	color:#F55B2C;
+	text-decoration: none;
+}
+a:visited {
+	color:#F55B2C;
+	text-decoration: none;
+}
+a:hover {
+	color:#616566;
+	text-decoration: none;
+}
+
+#expansion {
+	margin: 0 auto;
+	width: 650px;
+}
+
+.menu {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+	width: 500px;
+	opacity: .3;
+	text-shadow: #eee 0px 0px 2px;
+}
+
+.menu ul {
+	list-style-type: none;
+}
+.menu ul li {
+	display: inline;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.menu li a{
+	padding:20px; 
+	background-color: yellow;
+	text-decoration: none; 
+	font: bold 14px Verdana, Sans-Serif; 
+	letter-spacing: -1px; 
+	color: green;
+	padding: 20px;
+}
+
+.menu ul li a:hover {
+	color: gray;
+}
+
+.menu ul li a.active {
+	color: black;
+	background: white;
+}
+.menu ul li:first-child a { 
+	-moz-border-radius-topleft: 12px; 
+	-webkit-border-top-left-radius:12px;
+	-moz-border-radius-bottomleft: 12px; 
+	-webkit-border-bottom-left-radius:12px;
+}
+
+.menu ul li:last-child a { 
+	-moz-border-radius-right: 12px; 
+	-webkit-border-top-right-radius:12px;
+	-moz-border-radius-bottomright: 12px; 
+	-webkit-border-bottom-right-radius:12px;
+}
+.content {
+	margin: auto;
+	padding-top: 30px;
+} 
+
+.container {
+	background-color: gray;
+	width: 100%;
+	padding: 25px;
+	border-radius: 10px;
+	margin-top: 10px;
+	box-shadow: 5px 5px 10px #888888;
+}
+.container:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.about {
+	float: left;
+	margin: auto;
+	font-family: verdana;
+	color: white;
+	width: 375px;
+}
+.photo {
+	float: right;
+	
+}
+.photo img {
+	width: 250px;
+	border: 4px solid white;
+	border-radius: 7px;
+	box-shadow: 5px 5px 10px #888888;
+}
+
+

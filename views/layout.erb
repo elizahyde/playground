@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Rambla|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+		<title>Elizabeth Ramberg</title>
+	</head>
+
+	<div id="expansion">
+		<body>
+			<div class="container">
+			<div class="menu">
+				<ul>
+					<li><a href="/" title="Home">Home</a></li>
+				    <li><a href="/movies" title="Movies">Movies</a></li>
+				    <li><a href="/images" title="Images">Images</a></li>
+				    <li><a href="/stocks" title="Stocks">Stocks</a></li>
+				</ul>
+			</div>
+			<div class="content">
+				<%= yield %>
+			</div>	
+		</div>
+	</body>
+	</div>
+</html>

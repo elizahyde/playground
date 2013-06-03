@@ -1,0 +1,44 @@
+nav:
+- home
+- movies
+- stocks
+- images
+
+Sinatra project
+homepage
+- ****************brief para introducing user to site
+
+movies
+- form to enter movie name
+- when submitted, use movies gem to find information
+- show title, rating, director, some other info.
+- use images gem to get a random image for the movie and show it also.
+- Make sure if no movie found site works alright.*** No errors but just shpws blank page. Good or bad?
+
+stocks
+- form to enter stock symbol
+- when submitted, display stock price (a.k.a. last-traded price) and other basic info
+- Handle exception if invalid stock symbol entered*******Returns to homepage. show error page?
+
+images
+- form to enter keyword for image search
+- when submitted, display the image.
+- have a button on the page to automatically resubmit the same search
+- *******************have a button on the page to do a search for a random word (Make a list of 20+ words to choose the random search from)
+
+
+
+get "/stocks" do
+  @head = "Stocks"
+  @page = :stocks
+  unless params[:stock_tick].nil?
+    begin
+      @stock = StockQuote::Stock.quote(params[:stock_tick])
+      erb :stock_results
+    rescue
+      erb :stocks
+    end
+  else
+    erb :stocks
+  end
+end

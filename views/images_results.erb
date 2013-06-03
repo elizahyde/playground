@@ -1,0 +1,19 @@
+		<div class="photo">
+			<img src="<%= @img_url %>" >
+		</div>
+
+		<div class="about">
+
+			<form action="/images_results" method="search">
+				<legend>Search again?</legend>
+				<input type="text" name="image" value="<%= @image %>">
+				<button>Search</button>
+			</form>
+		</br>
+		</br>
+		</br>
+			<form action="/images_random" method="search">
+				<legend>Click for a random image</legend>
+				<button>Random</button>
+			</form>
+		</div>
