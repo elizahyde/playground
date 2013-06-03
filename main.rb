@@ -33,7 +33,7 @@ get "/movies_results" do
       @img_url = suckr.get_image_url({"q" => "#{@title}"})
       erb :movies_results
     rescue
-      erb :movies
+      erb :fail
     end   
 end
 
@@ -56,7 +56,7 @@ get "/stocks_results" do
     @img_url = suckr.get_image_url({"q" => "#{@stock_company}"})
     erb :stocks_results
   rescue
-    erb :stocks #currently returns to stocks page. may want to bring up error message
+    erb :fail
   end 
 end
 
@@ -67,9 +67,13 @@ end
 
 get "/images_results" do
   @image = params[:image]
-  suckr = ImageSuckr::GoogleSuckr.new
-  @img_url = suckr.get_image_url({"q" => "#{@image}"})
-  erb :images_results
+  begin
+    suckr = ImageSuckr::GoogleSuckr.new
+    @img_url = suckr.get_image_url({"q" => "#{@image}"})
+    erb :images_results
+  rescue
+    erb :fail
+  end
 end
 
 get "/images_random" do

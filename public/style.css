@@ -125,6 +125,9 @@ a:hover {
 	color: white;
 	width: 375px;
 }
+.about a {
+	color: #4A7023;
+}
 .photo {
 	float: right;
 	
