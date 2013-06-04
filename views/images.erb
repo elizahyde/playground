@@ -3,16 +3,18 @@
 		</div>
 
 		<div class="about">
-			<form action="/images_results" method="search">
+			<form action="/images_results" method="post">
 				<legend>Search for an image by keyword:</legend>
-				<input type="text" name="image" value="flower">
-				<button>Search</button>
+				<div class="input-append">
+					<input type="text" name="image" value="lemon" class="span2" id="appendedInputButton">
+					<button class="btn">Search</button>
+				</div>
 			</form>
 			</br>
 			</br>
 			</br>
-			<form action="/images_random" method="search">
+			<form action="/images_random" method="post">
 				<legend>Click for a random image</legend>
-				<button>Random</button>
+				<button class="btn">Random Image</button>
 			</form>
 		</div>

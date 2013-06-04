@@ -12,9 +12,11 @@
 					<li>Volume: <%= @stock_volume %> </li>				
 				</ul>
 			</div>
-			<form action="/stocks_results" method="search">
+			<form action="/stocks_results" method="post">
 				<legend>Search for a stock by symbol</legend>
-				<input type="text" name="symbol" value="<%= @symbol %>">
-				<button>Search</button>
+				<div class="input-append">
+					<input type="text" name="symbol" value="<%= @symbol %>" class="span2" id="appendedInputButton">
+					<button class="btn">Search</button>
+				</div>
 			</form>
 		</div>

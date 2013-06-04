@@ -25,20 +25,8 @@ images
 - when submitted, display the image.
 - have a button on the page to automatically resubmit the same search
 - *******************have a button on the page to do a search for a random word (Make a list of 20+ words to choose the random search from)
+-------------------------------------------------------------------------------------------------------------------------
+Post vs Get
 
-
-
-get "/stocks" do
-  @head = "Stocks"
-  @page = :stocks
-  unless params[:stock_tick].nil?
-    begin
-      @stock = StockQuote::Stock.quote(params[:stock_tick])
-      erb :stock_results
-    rescue
-      erb :stocks
-    end
-  else
-    erb :stocks
-  end
-end
+Post-info sent behind the screen, URL pretty (doesnt show the input), refreshing resubmits the info (those annoying popups...but good to keep viruses from taking over)
+Get-sometimes you want the direct link so you can send the results (i.e. google search results), can be bookmarked

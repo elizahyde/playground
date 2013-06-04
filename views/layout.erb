@@ -3,25 +3,39 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="/bootstrap_ed.css">
+		<link rel="stylesheet" href="/bootstrap-responsive.css">
+
 		<link href='http://fonts.googleapis.com/css?family=Rambla|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
 		<title>Elizabeth Ramberg</title>
 	</head>
 
-	<div id="expansion">
+<!-- 	<div id="expansion"> -->
 		<body>
+
 			<div class="container">
-			<div class="menu">
-				<ul>
-					<li><a href="/" title="Home">Home</a></li>
-				    <li><a href="/movies" title="Movies">Movies</a></li>
-				    <li><a href="/images" title="Images">Images</a></li>
-				    <li><a href="/stocks" title="Stocks">Stocks</a></li>
-				</ul>
+
+
+				<div class="navbar">
+					  <div class="navbar-inner">
+			    <a class="brand" href="/">Playground</a>
+			    <ul class="nav">
+			    	<li class="divider-vertical"></li>
+			      <li><a href="/movies">Movies</a></li>
+			      <li><a href="/images">Images</a></li>
+			      <li><a href="/stocks">Stocks</a></li>
+			    </ul>
+			  </div>
+				</div>
+
+				<div class="content">
+					<%= yield %>
+				</div>	
+		
+
 			</div>
-			<div class="content">
-				<%= yield %>
-			</div>	
-		</div>
-	</body>
-	</div>
+
+		</body>
+<!-- 	</div> -->
+
 </html>

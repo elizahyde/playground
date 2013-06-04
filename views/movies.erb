@@ -3,9 +3,11 @@
 		</div>
 
 		<div class="about">
-			<form action="/movies_results" method="search" value="Jaws">
+			<form action="/movies_results" method="post" value="Jaws">
 				<legend>Search for a movie by title</legend>
-				<input type="text" name="title">
-				<button>Search</button>
+				<div class="input-append">
+					<input type="text" name="title" class="span2" id="appendedInputButton">
+					<button class="btn">Search</button>
+				</div>
 			</form>
 		</div>

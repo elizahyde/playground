@@ -18,7 +18,7 @@ get "/movies" do
   erb :movies
 end
 
-get "/movies_results" do
+post "/movies_results" do
     @title = params[:title]
 
     begin
@@ -41,7 +41,7 @@ get "/stocks" do
   erb :stocks
 end
 
-get "/stocks_results" do
+post "/stocks_results" do
   @symbol = params[:symbol]
   begin
     @stock = StockQuote::Stock.quote(@symbol)
@@ -65,7 +65,7 @@ get "/images" do
   erb :images
 end
 
-get "/images_results" do
+post "/images_results" do
   @image = params[:image]
   begin
     suckr = ImageSuckr::GoogleSuckr.new
@@ -76,7 +76,7 @@ get "/images_results" do
   end
 end
 
-get "/images_random" do
+post "/images_random" do
   words = ["peonies", "roses", "lily of the valley", "daffodil", "orchids", "narcissus", "iris", 
   "tulips", "daisies", "gardenias", "anemones flower", "hydrangeas", "lilacs", "sunflowers",
   "begonias", "cala lilly", "carnation", "dahlia", "lavender", "pansy", "oriental lily" ]
